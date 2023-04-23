@@ -75,10 +75,11 @@ public class EmployeeController {
 	}
 	
 	@PostMapping("/")
-	public ResponseEntity<Employee> saveEmployee(@RequestBody Employee employee) {
+	public ResponseEntity<EntityModel<Employee>> saveEmployee(@RequestBody Employee employee) {
 		
 		Employee savedEmployee = employeeService.save(employee);
-		return new ResponseEntity<Employee>(savedEmployee, HttpStatus.CREATED);
+		EntityModel<Employee> entityModel = empModelAssembler.toModel(savedEmployee);
+		return new ResponseEntity<EntityModel<Employee>>(entityModel, HttpStatus.CREATED);
 	}
 	
 	@PutMapping("/update/{id}")
