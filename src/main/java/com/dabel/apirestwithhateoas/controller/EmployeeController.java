@@ -82,21 +82,6 @@ public class EmployeeController {
 		return new ResponseEntity<EntityModel<Employee>>(entityModel, HttpStatus.CREATED);
 	}
 	
-	@PutMapping("/update/{id}")
-	public ResponseEntity<Object> updateEmployee(@PathVariable int id, @RequestBody Employee employee) {
-		
-		Optional<Employee> checkEmployee = employeeService.findById(id);
-		
-		if(checkEmployee.isEmpty()) return ResponseEntity.notFound().build();
-				
-		//update employee id to be replaced content
-		employee.setId(checkEmployee.get().getId());
-		employeeService.save(employee);
-		
-		return ResponseEntity.noContent().build();
-	}
-	
-	
 	@DeleteMapping("delete/{id}")
 	public ResponseEntity<Object> deleteEmployee(@PathVariable int id) {
 		
