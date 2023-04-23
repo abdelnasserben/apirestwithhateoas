@@ -1,6 +1,7 @@
 # API REST with Hateoas
 
-Il s'agit d'un exemple basique d'une API REST pour la gestion des employés d'une société X. Les informations sont stockées dans une base de données H2.
+Il s'agit d'un exemple basique d'une API REST pour la gestion des employés d'une société X.
+Les informations sont stockées dans une base de données H2.
 L'API implémente les opérations CRUD avec la base de données et dispose des fonctions de l'Hypermedia HATEOS.
 
 
