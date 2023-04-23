@@ -1,4 +1,4 @@
-# API REST with Hateoas
+# API REST With Hateoas
 
 Il s'agit d'un exemple basique d'une API REST pour la gestion des employés d'une société X.
 Les informations sont stockées dans une base de données H2.
